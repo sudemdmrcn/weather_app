@@ -2,11 +2,59 @@
     <!--
       Uygulamadaki sabit metinler burada durur.
       Tek yerden değiştirilir, başka dillere çevrilebilir.
+
+      Not: Hata mesajları ViewModel içinde yazılıdır; orada metni
+      hatanın türüne göre seçiyoruz.
     -->
 
     <!-- Telefonun ana ekranında görünen uygulama adı. -->
     <string name="app_name">Hava</string>
 
-    <!-- Ana ekranda görünen karşılama metni. Değiştirip tekrar Run et. -->
-    <string name="welcome_message">Merhaba Hava Durumu!</string>
+    <!-- Şehir ekle (arama) ekranı -->
+    <string name="city_tagline">Bir şehir seç, hava durumunu gör</string>
+    <string name="search_hint">Şehir ara</string>
+    <string name="action_clear">Temizle</string>
+    <string name="action_retry">Tekrar dene</string>
+
+    <!-- Alt gezinme -->
+    <string name="tab_today">Bugün</string>
+    <string name="tab_cities">Şehirler</string>
+    <string name="tab_map">Harita</string>
+    <string name="tab_settings">Ayarlar</string>
+    <string name="coming_soon_title">Yakında</string>
+    <string name="coming_soon_message">Bu bölüm henüz hazır değil.</string>
+
+    <!-- Bugün ekranı -->
+    <string name="my_location">Konumum</string>
+    <string name="action_search_city">Şehir ara</string>
+    <string name="action_add_city">Şehir ekle</string>
+    <string name="hero_now">Şu an</string>
+    <string name="hero_at_hour">Saat %1$s</string>
+    <string name="detail_high_low">En yüksek %1$s · En düşük %2$s</string>
+    <string name="detail_feels_like">Hissedilen</string>
+    <string name="metric_wind">Rüzgar</string>
+    <string name="metric_humidity">Nem</string>
+    <string name="metric_rain">Yağış</string>
+    <string name="wind_unit">km/sa</string>
+    <string name="hourly_title">Saatlik</string>
+    <string name="hourly_hint">Bir saate dokun</string>
+    <string name="hourly_now">Şimdi</string>
+    <string name="daily_title">7 günlük tahmin</string>
+    <string name="today">Bugün</string>
+    <string name="details_title">Detaylar</string>
+    <string name="detail_uv">UV indeksi</string>
+    <string name="detail_wind_direction">Rüzgâr yönü</string>
+    <string name="detail_sunrise">Gün doğumu</string>
+    <string name="detail_sunset">Gün batımı</string>
+    <string name="detail_pressure">Basınç</string>
+    <string name="detail_visibility">Görüş</string>
+    <string name="forecast_empty">Bu şehir için tahmin bulunamadı.</string>
+
+    <!-- Şehirler ekranı -->
+    <string name="cities_title">Şehirler</string>
+    <string name="cities_search_label">Şehir ara</string>
+    <string name="cities_search_placeholder">Örn. Ankara, Berlin…</string>
+    <string name="cities_empty_title">Şehir bulunamadı</string>
+    <string name="cities_empty_message">Kayıtlı şehirlerin arasında eşleşme yok.</string>
+    <string name="cities_no_data">—</string>
 </resources>

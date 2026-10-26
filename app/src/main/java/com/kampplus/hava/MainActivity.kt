@@ -5,14 +5,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import com.kampplus.hava.ui.HavaNavHost
 import com.kampplus.hava.ui.theme.HavaTheme
 
 /**
@@ -25,7 +18,7 @@ import com.kampplus.hava.ui.theme.HavaTheme
  * **Fragment'in rolü:** Klasik (XML) Android'de bir Activity'nin içine yerleştirilen,
  * kendi yaşam döngüsü olan *ekran parçasıdır* (örn. hava durumu listesi + detay).
  * Bu proje Jetpack Compose kullandığı için Fragment yoktur: aynı işi
- * [HavaScreen] gibi `@Composable` fonksiyonlar yapar. Yani
+ * `TodayScreen` / `CitiesScreen` gibi `@Composable` fonksiyonlar yapar. Yani
  * Activity = sahne, Composable (eski adıyla Fragment) = sahnedeki ekran parçası.
  */
 class MainActivity : ComponentActivity() {
@@ -44,7 +37,7 @@ class MainActivity : ComponentActivity() {
         // Süslü parantezin içi Compose dünyasıdır.
         setContent {
             HavaTheme {
-                HavaScreen()
+                HavaNavHost()
             }
         }
     }
@@ -81,22 +74,5 @@ class MainActivity : ComponentActivity() {
     private companion object {
         /** Logcat'te filtrelemek için: arama kutusuna `Lifecycle` yaz. */
         const val TAG = "Lifecycle"
-    }
-}
-
-/**
- * Ekranın içeriği. Fragment'in yerini alan Compose "ekran parçası".
- * Metni `res/values/strings.xml` içindeki `welcome_message` belirler.
- */
-@Composable
-fun HavaScreen() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = stringResource(R.string.welcome_message),
-            style = MaterialTheme.typography.headlineMedium,
-        )
     }
 }
